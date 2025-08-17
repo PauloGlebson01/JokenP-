@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("https://fastly.picsum.photos/id/998/1600/900.jpg?hmac=DzpAhEuWH2FV45EUghRnPNmIWaBJ4PGYdVeV9abjG8g");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Botão Reset */
+#reset {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #444; /* vermelho chamativo */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#reset:hover {
+  background-color: #666; /* vermelho mais escuro */
+  transform: scale(1.05);
+}
+
+#reset:active {
+  background-color: #a40e16;
+  transform: scale(0.95);
+}
+
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botões principais (Pedra, Papel, Tesoura) */
+.buttons button {
+  font-size: 2.5rem; /* ícones grandes */
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #457b9d; /* azul elegante */
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #1d3557; /* azul mais escuro no hover */
+  transform: scale(1.1);
+}
+
+.buttons button:active {
+  background-color: #0b203a;
+  transform: scale(0.95);
+}
+
+#rock {
+    background-color: red;
+}
+
+#paper {
+    background-color: #4e4be786;
+}
+
+#scissors {
+    background-color: #000000;
+}
+
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.your-score span {
+    color: rgb(77, 128, 216);
+}
+
+.machine-score span {
+    color: rgb(224, 71, 51);
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 1.6rem;
+  }
+
+  .buttons button {
+    font-size: 2rem;
+    padding: 12px;
+  }
+
+  .result {
+    font-size: 1rem;
+  }
+
+  .your-score,
+  .machine-score {
+    font-size: 0.9rem;
+  }
+
+  #reset {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .buttons button {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+}
